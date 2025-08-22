@@ -1,6 +1,6 @@
 # SafeBox360 – Client (On-Premises)
 
-## 🎯 Objetivo
+## 🎯 Purpose
 
 The **SafeBox360 Client** was designed to deliver **peace of mind and reliability** to businesses, ensuring that the **critical configurations of their network equipment are always protected.**
 
