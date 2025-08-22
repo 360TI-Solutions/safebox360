@@ -1,0 +1,93 @@
+#version: "3.7"
+#
+services:
+    # image project
+    safebox360:
+        build:
+            context: .
+            dockerfile: Dockerfile-client
+            args:
+              - uid=${APP_UID}
+              - user=administrator
+        image: safebox360:latest
+        container_name: safebox360
+        restart: unless-stopped
+        working_dir: /var/www/
+        devices:
+          - /dev/mem:/dev/mem
+        cap_add:
+          - SYS_RAWIO
+        user: root
+        environment:
+          - APP_UID=${APP_UID}
+          - APP_GID=${APP_GID}
+          - TZ=UTC
+        dns:
+          - 8.8.8.8
+        ports:
+          - "69:69/udp"
+          - "11000-11100:11000-11100/udp"
+
+        volumes:
+            - ./backend:/var/www
+            - ./docker/supervisor:/etc/supervisor
+            - ./.env:/var/www/.env
+        depends_on:
+            - safebox360redis
+        networks:
+            - safebox360network
+
+    # nginx
+    safebox360nginx:
+        build:
+            context: .
+            dockerfile: Dockerfile-nginx
+        container_name: safebox360nginx
+        restart: unless-stopped
+        ports:
+            - "10182:443"
+            - "10185:80"
+        volumes:
+            - ./backend:/var/www/backend
+            - ./frontend:/var/www/frontend
+            - ./docker/nginx/:/etc/nginx/conf.d/
+            - ./.env:/var/www/backend/.env
+        networks:
+            - safebox360network
+        environment:
+            TZ: UTC
+
+    # db postgresql
+    safebox360postgresql:
+        image: postgres:latest
+        container_name: safebox3602postgresql
+        restart: unless-stopped
+        environment:
+            POSTGRES_USER: "safebox360"
+            POSTGRES_DATABASE: "safebox360"
+            POSTGRES_PASSWORD: "safebox360"
+            TZ: America/Sao_Paulo
+        volumes:
+            - ../database:/var/lib/postgresql
+        ports:
+          - "10183:5432"
+        networks:
+            - safebox360network
+
+    # redis
+    safebox360redis:
+        image: redis:latest
+        container_name: safebox360redis
+        restart: unless-stopped
+        networks:
+          - safebox360network
+        environment:
+          TZ: UTC
+
+networks:
+    safebox360network:
+        driver: bridge
+        #ipam:
+        #    config:
+        #        - subnet: 172.27.4.0/24
+        #          gateway: 172.27.4.1

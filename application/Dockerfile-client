@@ -1,0 +1,100 @@
+FROM php:8.3-fpm-bookworm
+ARG user=administrator
+ARG uid=1000
+ARG gid=1000
+RUN mkdir /home/administrator
+RUN apt-get update
+RUN apt-get install -y \
+git \
+curl \
+gnupg \
+ca-certificates \
+fonts-liberation \
+libappindicator3-1 \
+libasound2 \
+libatk-bridge2.0-0 \
+libatk1.0-0 \
+libcups2 \
+libdbus-1-3 \
+libgdk-pixbuf2.0-0 \
+libnspr4 \
+libnss3 \
+libx11-xcb1 \
+libxcomposite1 \
+libxdamage1 \
+libxrandr2 \
+xdg-utils \
+libu2f-udev \
+libvulkan1 \
+libpng-dev \
+libonig-dev \
+libxml2-dev \
+libcurl4-openssl-dev \
+zip \
+unzip \
+libpq-dev \
+cron \
+python3-pip \
+libmagickwand-dev \
+libzip-dev \
+libgpgme-dev \
+wget \
+sysstat \
+dnsutils \
+inetutils-inetd \
+traceroute \
+iputils-ping \
+whois \
+supervisor \
+--no-install-recommends
+COPY ioncube_loader_lin_8.3.so /tmp/ioncube_loader_lin_8.3.so
+RUN extension_dir=$(php -i | grep "^extension_dir" | awk '{print $3}') \
+&& cp /tmp/ioncube_loader_lin_8.3.so "$extension_dir" \
+&& echo "zend_extension=ioncube_loader_lin_8.3.so" > /usr/local/etc/php/conf.d/00-ioncube.ini \
+&& rm -f /tmp/ioncube_loader_lin_8.3.so
+RUN pecl channel-update pecl.php.net
+RUN printf "\n" | pecl install imagick
+RUN docker-php-ext-enable imagick 
+RUN apt-get update && apt-get install -y libpq-dev && docker-php-ext-install pdo_pgsql && docker-php-ext-enable pdo_pgsql
+RUN docker-php-ext-install mbstring && docker-php-ext-enable mbstring
+RUN docker-php-ext-install exif && docker-php-ext-enable exif
+RUN docker-php-ext-install pcntl && docker-php-ext-enable pcntl 
+RUN docker-php-ext-install bcmath && docker-php-ext-enable bcmath 
+RUN docker-php-ext-install gd && docker-php-ext-enable gd 
+RUN docker-php-ext-install sockets && docker-php-ext-enable sockets 
+RUN docker-php-ext-install curl && docker-php-ext-enable curl 
+RUN docker-php-ext-install zip && docker-php-ext-enable zip
+RUN pecl search redis
+RUN pecl channel-update pecl.php.net
+RUN pecl install -o -f redis \
+&&  rm -rf /tmp/pear \
+&&  docker-php-ext-enable redis
+RUN pip3 install zabbix-api python-gnupg paramiko netmiko Cython --break-system-packages
+RUN pip3 install pycryptodome --break-system-packages
+COPY crontabs/safebox360 /etc/cron.d
+RUN chmod 0644 /etc/cron.d/safebox360 && crontab /etc/cron.d/safebox360
+RUN apt-get install -y procps
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+#RUN useradd -G www-data,root -u $uid -d /home/$user $user
+RUN groupadd -g $gid $user \
+ && useradd -m -u $uid -g $gid -G www-data,root $user
+RUN mkdir -p /home/$user/.composer && \
+chown -R $user:$user /home/$user
+RUN chown -R $user:$user /var/www
+RUN su - administrator -c "gpg --list-keys"
+RUN mkdir /var/www/bin
+#COPY bin/dmi /var/www/bin
+#RUN chown root:root /var/www/bin/dmi
+#RUN chmod a+s /var/www/bin/dmi
+WORKDIR /var/www
+COPY docker/php/custom.ini.example /usr/local/etc/php/conf.d/custom.ini
+COPY docker/php-fpm.d/www.conf /usr/local/etc/php-fpm.d/www.conf
+USER $user
+RUN pip3 install --user pyarmor==8.3.6 --break-system-packages
+COPY docker-entrypoint.sh /usr/local/bin/
+#RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+ENTRYPOINT ["docker-entrypoint.sh"]
+#CMD ["php-fpm"]
+CMD ["supervisord", "-n"]
+

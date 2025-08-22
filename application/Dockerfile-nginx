@@ -1,0 +1,21 @@
+FROM nginx:stable
+
+# Instala o OpenSSL para gerar o certificado
+RUN apt-get update && apt-get install -y openssl
+
+# Cria diretório para armazenar o certificado
+RUN mkdir -p /etc/nginx/ssl
+
+# Gera certificado autoassinado
+RUN openssl req -x509 -nodes -days 1825 \
+  -newkey rsa:2048 \
+  -keyout /etc/nginx/ssl/selfsigned.key \
+  -out /etc/nginx/ssl/selfsigned.crt \
+  -subj "/C=BR/ST=RS/L=Canoas/O=UnionNetworkConsoleClient/OU=Local/CN=localhost"
+
+# Copia configuração customizada do NGINX
+COPY docker/nginx/laravel.example.conf /etc/nginx/conf.d/default.conf
+
+# Expõe a porta 443 (HTTPS)
+EXPOSE 443
+
