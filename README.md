@@ -83,6 +83,11 @@ Monitor all backup operations and system events with detailed logs.
 
 Quickly view, download and compare backup versions with side-by-side diff.
 
+<p align="center">
+  <img src="screenshots/diff.png" alt="Log View" width="45%"/>
+  <img src="screenshots/diff2.png" alt="Log View" width="45%"/>
+</p>
+
 **Multilingual Interface**
 
 Available in multiple languages: EN, ES, FR, DE, IT, NL, PT-PT, PT-BR.
