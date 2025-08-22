@@ -65,6 +65,11 @@ Easily define days and times for automatic backups based on TAGs.
 
 Browse and manage your stored backup files with a simple and organized view.
 
+<p align="center">
+  <img src="screenshots/storage.png" alt="Storage Management" width="45%"/>
+  <img src="screenshots/storage2.png" alt="Storage Management" width="45%"/>
+</p>
+
 **Log View**
 
 Monitor all backup operations and system events with detailed logs.
