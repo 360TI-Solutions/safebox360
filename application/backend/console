@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z $APP_UID ]
+then
+	docker compose exec -it --user=administrator safebox360 php artisan console
+else
+	php /var/www/artisan console
+fi

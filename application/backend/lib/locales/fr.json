@@ -1,0 +1,21 @@
+{
+    "tmp_missing": "Fichier temporaire non spécifié",
+    "starting": "Sauvegarde de {host} commencée.",
+    "connecting": "Connexion à {host} ...",
+    "error_timeout": "ERREUR : Délai d'attente lors de la connexion à l'hôte/port. [101]",
+    "error_auth": "ERREUR : Échec de l'authentification SSH (vérifiez utilisateur/mot de passe). [102]",
+    "error_filenotfound": "ERREUR : {e} [103]",
+    "error_unexpected": "ERREUR inattendue : {e} [104]",
+    "fail_to_generate_remote": "Échec de la génération du fichier distant",
+    "remote_file_not_found": "Fichier distant introuvable avec '/file print: {remote_name} / {alt}",
+    "removing_remote_file": "Suppression du fichier distant...",
+    "success": "Sauvegarde terminée avec succès. [100]",
+    "locally_stored": "Sauvegarde enregistrée localement.",
+    "opening_sftp": "Transfert du fichier distant...",
+    "generating_remote_file": "Génération du fichier distant : {file}...",
+    "checking_remote_file": "Vérification du fichier distant...",
+    "invalid_license": "Licence invalide ! [105]",
+    "license_error": "Erreur de licence / Licence introuvable. [106]",
+    "license_blocked": "Licence bloquée ! [107]",
+    "cannot_run_directly": "Ce script ne peut pas être exécuté de cette manière. [108]"
+}

@@ -1,2 +1,13 @@
-./database
+database
+application/.env
+application/docker-compose.yml
+application/composer.json
 
+application/backend/.env
+application/backend/.installed
+application/backend/composer.json
+application/backend/composer.lock
+application/backend/storage
+application/backend/supervisord.pid
+application/backend/tests
+application/backend/vendor

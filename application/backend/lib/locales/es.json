@@ -1,0 +1,21 @@
+{
+    "tmp_missing": "Falta especificar el archivo temporal",
+    "starting": "Respaldo de {host} iniciado.",
+    "connecting": "Conectando a {host} ...",
+    "error_timeout": "ERROR: Tiempo de espera al conectar con el host/puerto. [101]",
+    "error_auth": "ERROR: Fallo en la autenticación SSH (verifique usuario/contraseña). [102]",
+    "error_filenotfound": "ERROR: {e} [103]",
+    "error_unexpected": "ERROR inesperado: {e} [104]",
+    "fail_to_generate_remote": "Error al generar archivo remoto",
+    "remote_file_not_found": "Archivo remoto no encontrado con '/file print: {remote_name} / {alt}",
+    "removing_remote_file": "Eliminando archivo remoto...",
+    "success": "Respaldo completado con éxito. [100]",
+    "locally_stored": "Respaldo almacenado localmente.",
+    "opening_sftp": "Transfiriendo archivo remoto...",
+    "generating_remote_file": "Generando archivo remoto: {file}...",
+    "checking_remote_file": "Verificando archivo remoto...",
+    "invalid_license": "¡Licencia inválida! [105]",
+    "license_error": "Error de licencia / Licencia no encontrada. [106]",
+    "license_blocked": "¡Licencia bloqueada! [107]",
+    "cannot_run_directly": "Este script no puede ejecutarse de esta forma. [108]"
+}

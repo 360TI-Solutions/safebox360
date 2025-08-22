@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z $APP_UID ]
+then
+	docker compose exec -it --user=administrator safebox360 bash
+else
+	echo Você já está na shell do container
+fi

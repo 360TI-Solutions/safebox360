@@ -1,0 +1,81 @@
+{
+  "administrativo": {
+    "title": "Configurações",
+    "route-name": "configuracoes",
+    "sub_menu": [
+      {
+        "title": "Empresas",
+        "route-name": "configuracoes.empresas",
+        "permissions": [
+          {
+            "key": "configuracoes.empresas.salvar",
+            "label": "Salvar"
+          },
+          {
+            "key": "configuracoes.empresas.excluir",
+            "label": "Excluir"
+          }
+        ]
+      },
+      {
+        "title": "Perfis de acesso",
+        "route-name": "configuracoes.perfis",
+        "permissions": [
+          {
+            "key": "configuracoes.perfis.salvar",
+            "label": "Salvar"
+          },
+          {
+            "key": "configuracoes.perfis.excluir",
+            "label": "Excluir"
+          }
+        ]
+      },
+      {
+        "title": "Sistema",
+        "route-name": "configuracoes.sistema"
+      },
+      {
+        "title": "SMTP",
+        "route-name": "configuracoes.smtp"
+      },
+      {
+        "title": "Senhas",
+        "route-name": "configuracoes.senha"
+      }
+    ]
+  },
+  "clientefinal": {
+    "title": "Configurações",
+    "sub_menu": [
+      {
+        "title": "Empresas",
+        "route-name": "configuracoes.empresas",
+        "permissions": [
+          {
+            "key": "configuracoes.empresas.salvar",
+            "label": "Salvar"
+          },
+          {
+            "key": "configuracoes.empresas.excluir",
+            "label": "Excluir"
+          }
+        ]
+      },
+      {
+        "title": "Perfis",
+        "route-name": "configuracoes.perfis",
+        "permissions": [
+          {
+            "key": "configuracoes.perfis.salvar",
+            "label": "Salvar"
+          },
+          {
+            "key": "configuracoes.perfis.excluir",
+            "label": "Excluir"
+          }
+        ]
+      }
+    ]
+  }
+}

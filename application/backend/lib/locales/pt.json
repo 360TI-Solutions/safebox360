@@ -1,0 +1,21 @@
+{
+    "tmp_missing": "Faltou especificar o ficheiro temporário",
+    "starting": "Backup de {host} iniciado.",
+    "connecting": "A ligar a {host} ...",
+    "error_timeout": "ERRO: Timeout ao ligar ao host/porta informados. [101]",
+    "error_auth": "ERRO: Falha de autenticação SSH (verifique utilizador/senha). [102]",
+    "error_filenotfound": "ERRO: {e} [103]",
+    "error_unexpected": "ERRO inesperado: {e} [104]",
+    "fail_to_generate_remote": "Falha ao gerar ficheiro remoto",
+    "remote_file_not_found": "Ficheiro remoto não encontrado com '/file print: {remote_name} / {alt}",
+    "removing_remote_file": "A remover ficheiro remoto...",
+    "success": "Backup concluído com sucesso. [100]",
+    "locally_stored": "Backup armazenado localmente.",
+    "opening_sftp": "A transferir ficheiro remoto...",
+    "generating_remote_file": "A gerar ficheiro remoto: {file}...",
+    "checking_remote_file": "A verificar ficheiro remoto...",
+    "invalid_license": "Licença inválida! [105]",
+    "license_error": "Erro de licença/Licença não encontrada. [106]",
+    "license_blocked": "Licença bloqueada! [107]",
+    "cannot_run_directly": "Este script não pode ser executado desta forma. [108]"
+}

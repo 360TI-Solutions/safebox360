@@ -1,0 +1,21 @@
+{
+    "tmp_missing": "Tijdelijk bestand niet opgegeven",
+    "starting": "Backup van {host} gestart.",
+    "connecting": "Verbinding maken met {host} ...",
+    "error_timeout": "FOUT: Time-out bij verbinden met host/poort. [101]",
+    "error_auth": "FOUT: SSH-authenticatie mislukt (controleer gebruikersnaam/wachtwoord). [102]",
+    "error_filenotfound": "FOUT: {e} [103]",
+    "error_unexpected": "Onverwachte FOUT: {e} [104]",
+    "fail_to_generate_remote": "Kan extern bestand niet genereren",
+    "remote_file_not_found": "Extern bestand niet gevonden met '/file print: {remote_name} / {alt}",
+    "removing_remote_file": "Extern bestand wordt verwijderd...",
+    "success": "Backup succesvol voltooid. [100]",
+    "locally_stored": "Backup lokaal opgeslagen.",
+    "opening_sftp": "Extern bestand wordt overgedragen...",
+    "generating_remote_file": "Extern bestand genereren: {file}...",
+    "checking_remote_file": "Extern bestand controleren...",
+    "invalid_license": "Ongeldige licentie! [105]",
+    "license_error": "Licentiefout / Licentie niet gevonden. [106]",
+    "license_blocked": "Licentie geblokkeerd! [107]",
+    "cannot_run_directly": "Dit script kan niet op deze manier worden uitgevoerd. [108]"
+}

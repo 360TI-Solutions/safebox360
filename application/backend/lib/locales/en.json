@@ -1,0 +1,23 @@
+{
+    "tmp_missing": "Temporary file not specified",
+    "starting": "Backup for {host} started.",
+    "connecting": "Connecting to {host} ...",
+    "error_timeout": "ERROR: Timeout when connecting to host/port. [101]",
+    "error_auth": "ERROR: SSH authentication failed (check username/password). [102]",
+    "error_filenotfound": "ERROR: {e} [103]",
+    "error_unexpected": "Unexpected ERROR: {e} [104]",
+    "fail_to_generate_remote": "Failed to generate remote file",
+    "remote_file_not_found": "Remote file not found with '/file print: {remote_name} / {alt}",
+    "removing_remote_file": "Removing remote file...",
+    "success": "Backup completed successfully. [100]",
+    "locally_stored": "Backup stored locally.",
+    "opening_sftp": "Transferring remote file...",
+    "generating_remote_file": "Generating remote file: {file}...",
+    "checking_remote_file": "Checking remote file...",
+    "invalid_license": "Invalid license! [105]",
+    "license_error": "License error/License not found. [106]",
+    "license_blocked": "License blocked! [107]",
+    "cannot_run_directly": "This script cannot be run this way. [108]",
+
+    "getting": "Getting configuration"
+}

@@ -1,0 +1,21 @@
+{
+    "tmp_missing": "Temporäre Datei nicht angegeben",
+    "starting": "Backup für {host} gestartet.",
+    "connecting": "Verbindung zu {host} wird hergestellt ...",
+    "error_timeout": "FEHLER: Zeitüberschreitung beim Verbinden mit Host/Port. [101]",
+    "error_auth": "FEHLER: SSH-Authentifizierung fehlgeschlagen (Benutzername/Passwort prüfen). [102]",
+    "error_filenotfound": "FEHLER: {e} [103]",
+    "error_unexpected": "Unerwarteter FEHLER: {e} [104]",
+    "fail_to_generate_remote": "Fehler beim Erstellen der entfernten Datei",
+    "remote_file_not_found": "Entfernte Datei nicht gefunden mit '/file print: {remote_name} / {alt}",
+    "removing_remote_file": "Entfernte Datei wird gelöscht...",
+    "success": "Backup erfolgreich abgeschlossen. [100]",
+    "locally_stored": "Backup lokal gespeichert.",
+    "opening_sftp": "Entfernte Datei wird übertragen...",
+    "generating_remote_file": "Entfernte Datei wird erstellt: {file}...",
+    "checking_remote_file": "Entfernte Datei wird überprüft...",
+    "invalid_license": "Ungültige Lizenz! [105]",
+    "license_error": "Lizenzfehler / Lizenz nicht gefunden. [106]",
+    "license_blocked": "Lizenz blockiert! [107]",
+    "cannot_run_directly": "Dieses Skript kann nicht auf diese Weise ausgeführt werden. [108]"
+}
