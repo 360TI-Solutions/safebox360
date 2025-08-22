@@ -1,0 +1,19 @@
+import { Card, CardHeader, CardBody } from './../../components/card/card.jsx';
+
+<!-- background & border -->
+<Card className="mb-3">
+  <CardHeader className="bg-theme bg-opacity-15">HEADER</CardHeader>
+  <CardBody className="bg-theme bg-opacity-30 text-white">
+    <h5 className="card-title">Primary Card title</h5>
+    <p className="card-text text-body text-opacity-75">...</p>
+  </CardBody>
+</Card>
+
+<!-- border & color -->
+<Card className="mb-3">
+  <CardHeader className="text-theme">HEADER</CardHeader>
+  <CardBody>
+    <h5 className="card-title text-theme">Primary Card title</h5>
+    <p className="card-text text-theme text-opacity-75">...</p>
+  </CardBody>
+</Card>

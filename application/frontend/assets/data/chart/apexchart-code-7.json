@@ -1,0 +1,38 @@
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { getChartApexDefaultOptions } from './composables/apexChartOptions.js';
+
+function ChartApex() {
+  var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+  var white = (getComputedStyle(document.body).getPropertyValue('--bs-white')).trim();
+  var pink = (getComputedStyle(document.body).getPropertyValue('--bs-pink')).trim();
+  var bodyColorRgb = (getComputedStyle(document.body).getPropertyValue('--bs-body-color-rgb')).trim();
+  
+  var chartOptions = getChartApexDefaultOptions();
+  
+  chartOptions.markers = { strokeColors: 'transparent' };
+  chartOptions.dataLabels = { enabled: false };
+  chartOptions.colors = [theme, white, 'rgba('+ bodyColorRgb + ', .5)', pink];
+  chartOptions.fill = { opacity: 0.8 };
+  chartOptions.title = { text: 'Simple Bubble Chart' };
+  chartOptions.xaxis.tickAmount = 12;
+  chartOptions.xaxis.type = 'category';
+  chartOptions.yaxis.max = 70;
+  
+  var chartData = [
+    { name: 'Bubble1', data: generateBubbleChartData(new Date('11 Feb 2024 GMT').getTime(), 20, { min: 10, max: 60 }) },
+    {  name: 'Bubble2', data: generateBubbleChartData(new Date('11 Feb 2024 GMT').getTime(), 20, { min: 10, max: 60 }) },
+    { name: 'Bubble3', data: generateBubbleChartData(new Date('11 Feb 2024 GMT').getTime(), 20, { min: 10, max: 60 }) },
+    { name: 'Bubble4', data: generateBubbleChartData(new Date('11 Feb 2024 GMT').getTime(), 20, { min: 10, max: 60 }) }
+  ];
+  
+  render() {
+    return (
+      <div>
+        <Chart type="bubble" options={chartOptions} series={chartData} height="250" />
+      </div>
+    )
+  }
+}
+
+export default ChartApex;

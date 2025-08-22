@@ -1,0 +1,94 @@
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { getChartApexDefaultOptions } from './composables/apexChartOptions.js';
+
+function ChartApex() {
+  var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+  var warning = (getComputedStyle(document.body).getPropertyValue('--bs-warning')).trim();
+  var bodyColor = (getComputedStyle(document.body).getPropertyValue('--bs-body-color')).trim();
+  var bodyColorRgb = (getComputedStyle(document.body).getPropertyValue('--bs-body-color-rgb')).trim();
+  var borderColor = (getComputedStyle(document.body).getPropertyValue('--bs-border-color')).trim();
+  
+  var chartOptions = getChartApexDefaultOptions();
+  
+  chartOptions.chart = { stacked: false };
+  chartOptions.dataLabels = { enabled: false };
+  chartOptions.stroke = { width: [0, 0, 3] };
+  chartOptions.colors = [theme, 'rgba('+ bodyColorRgb + ', .5)', warning];
+  chartOptions.title.text = 'XYZ - Stock Analysis (2015 - 2024)';
+  chartOptions.title.align = 'left';
+  chartOptions.title.offsetX = 110;
+  chartOptions.xaxis = {
+    categories: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
+    axisBorder: {
+      show: true,
+      color: borderColor,
+      height: 1,
+      width: '100%',
+      offsetX: 0,
+      offsetY: -1
+    },
+    axisTicks: {
+      show: true,
+      borderType: 'solid',
+      color: borderColor,
+      height: 6,
+      offsetX: 0,
+      offsetY: 0
+    }
+  };
+  chartOptions.yaxis = [{
+    axisTicks: { show: true, color: borderColor },
+    axisBorder: { show: true, color: theme },
+    labels: { style: { colors: [bodyColor] } },
+    title: {
+      text: "Income (*1000)",
+      style: { color: theme }
+    },
+    tooltip: { enabled: true }
+  },{
+    seriesName: 'Income',
+    opposite: true,
+    axisTicks: { show: true, color: borderColor },
+    axisBorder: { show: true, color: borderColor },
+    labels: { style: { colors: [bodyColor] } },
+    title: {
+      text: "Operating Cashflow (*1000)",
+      style: { color: bodyColor }
+    },
+  }, {
+    seriesName: 'Revenue',
+    opposite: true,
+    axisTicks: { show: true, color: borderColor },
+    axisBorder: { show: true, color: warning },
+    labels: { style: { colors: [bodyColor] } },
+    title: {
+      text: "Revenue (*1000)",
+      style: { color: warning }
+    }
+  }];
+  chartOptions.tooltip = {
+    fixed: {
+      enabled: true,
+      position: 'topLeft',
+      offsetY: 30,
+      offsetX: 60
+    },
+  };
+  chartOptions.legend.horizontalAlign = 'left';
+  chartOptions.legend.offsetX = 40;
+  
+  var chartData = [
+    { name: 'Income', type: 'column', data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6] }, 
+    { name: 'Cashflow', type: 'column',  data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5] },
+    { name: 'Revenue', type: 'line', data: [20, 29, 37, 36, 44, 45, 50, 58] }
+  ];
+  
+  return (
+    <div>
+      <Chart type="line" options={chartOptions} series={chartData} height="250" />
+    </div>
+  )
+}
+
+export default ChartApex;

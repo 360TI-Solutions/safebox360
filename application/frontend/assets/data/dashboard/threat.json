@@ -1,0 +1,14 @@
+{
+	"stats": [
+		{ "name": "THREATS", "value": "459", "chart_data": [74, 46] },
+		{ "name": "FALSE POS", "value": "20", "chart_data": [45, 50] },
+		{ "name": "RESP. TIME", "value": "1 min", "chart_data": [60, 72] }
+	],
+	"log": [
+		{ "src": "IDS", "type": "Malware", "level": "High", "total": "150" },
+		{ "src": "IPS", "type": "Phishing", "level": "Medium", "total": "90" },
+		{ "src": "FIREWALL", "type": "DDoS", "level": "Critical", "total": "45" },
+		{ "src": "ENDPOINT", "type": "XSS", "level": "High", "total": "30" },
+		{ "src": "IDS", "type": "SQL", "level": "Injection", "total": "Low 75" }
+	]
+}

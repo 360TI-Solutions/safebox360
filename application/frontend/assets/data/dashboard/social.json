@@ -1,0 +1,13 @@
+{
+	"total": "$70,563.43",
+	"percentage": "+45.76%",
+	"source": [
+		{ "icon": "fab fa-apple", "name": "APPLE STORE", "sales": "$34,840.17" }, 
+		{ "icon": "fab fa-facebook-f", "name": "FACEBOOK", "sales": "$12,502.67" }, 
+		{ "icon": "fab fa-instagram", "name": "INSTAGRAM", "sales": "$8,569.75" }, 
+		{ "icon": "fab fa-youtube", "name": "YOUTUBE", "sales": "$6,021.79" }, 
+		{ "icon": "fab fa-twitter", "name": "TWITTER", "sales": "$4,799.20" }, 
+		{ "icon": "fab fa-google", "name": "GOOGLE", "sales": "$3,405.85" }, 
+		{ "icon": "fab fa-tiktok", "name": "TIKTOK", "sales": "$424.00" }
+	]
+}

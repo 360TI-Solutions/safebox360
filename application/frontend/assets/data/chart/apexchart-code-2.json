@@ -1,0 +1,50 @@
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { getChartApexDefaultOptions } from './composables/apexChartOptions.js';
+
+function ChartApex() {
+  var bodyFontFamily = (getComputedStyle(document.body).getPropertyValue('--bs-body-font-family')).trim();
+  var bodyFontWeight = (getComputedStyle(document.body).getPropertyValue('--bs-body-font-weight')).trim();
+  var bodyColorRgb = (getComputedStyle(document.body).getPropertyValue('--bs-body-color-rgb')).trim();
+  var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+  var gray500 = (getComputedStyle(document.body).getPropertyValue('--bs-gray-500')).trim();
+  var white = (getComputedStyle(document.body).getPropertyValue('--bs-white')).trim();
+  
+  var chartOptions = getChartApexDefaultOptions();
+
+  chartOptions.title.text = 'Profit & Margin Chart';
+  chartOptions.title.align = 'center';
+  chartOptions.plotOptions = { bar: { horizontal: false, columnWidth: '55%', endingShape: 'rounded' } };
+  chartOptions.dataLabels.enabled = false;
+  chartOptions.stroke = {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  };
+  chartOptions.colors = [theme, gray500, white];
+  chartOptions.xaxis.categories = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'];
+  chartOptions.yaxis.title = {
+    text: '$ (thousands)',
+    style: { color: 'rgba('+ bodyColorRgb + ', .5)', fontSize: '12px', fontFamily: bodyFontFamily, fontWeight: bodyFontWeight }
+  };
+  chartOptions.fill = { opacity: 1 };
+  chartOptions.tooltip = {
+    y: {
+      formatter: function (val) { return "$ " + val + " thousands" }
+    }
+  };
+  
+  var chartData = [
+    { name: 'Net Profit', data: [44, 55, 57, 56, 61, 58, 63, 60, 66] }, 
+    { name: 'Revenue', data: [76, 85, 101, 98, 87, 105, 91, 114, 94] }, 
+    { name: 'Free Cash Flow', data: [35, 41, 36, 26, 45, 48, 52, 53, 41] }
+  ];
+  
+  return (
+    <div>
+      <Chart type="bar" options={chartOptions} series={chartData} height="250" />
+    </div>
+  )
+}
+
+export default ChartApex;

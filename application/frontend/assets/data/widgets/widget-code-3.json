@@ -1,0 +1,30 @@
+<Card>
+  <CardBody>
+    <div className="mb-2 small text-white fw-semibold d-flex align-items-center">
+      <div className="flex-fill">TOTAL ORDERS</div>
+      <div>
+        <a href="#/" data-bs-toggle="dropdown" className="text-white text-opacity-50"><i className="bi bi-three-dots-vertical fa-lg"></i></a>
+        <div className="dropdown-menu dropdown-menu-end">
+          ...
+        </div>
+      </div>
+    </div>
+    <div className="row mb-1">
+      <div className="col-lg-12 position-relative">
+        <h1 className="mb-1 d-flex align-items-center text-theme">
+          302
+          <span className="bg-white bg-opacity-15 badge fs-9px fw-semibold text-white px-2 py-2 d-flex align-items-center ms-3">
+            <i className="fa fa-exclamation-circle me-2 opacity-5"></i> 
+            3 pending orders
+          </span>
+        </h1>
+        <div className="small"><span className="badge bg-theme bg-opacity-15 text-theme py-2 me-1 fs-9px">+12%</span> compare to last week</div>
+        <i className="fab fa-google-wallet display-3 lh-1 text-body text-opacity-20 me-3 position-absolute end-0 top-0"></i>
+      </div>
+    </div>
+    <div className="mt-3 fs-9px fw-semibold text-body text-opacity-50">
+      <div>LAST UPDATED ON:</div>
+      <div className="text-body text-opacity-75">Feb 3, 4:09:57 AM UTC</div>
+    </div>
+  </CardBody>
+</Card>

@@ -1,0 +1,61 @@
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { getChartApexDefaultOptions } from './composables/apexChartOptions.js';
+
+function ChartApex() {
+  var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+  var white = (getComputedStyle(document.body).getPropertyValue('--bs-white')).trim();
+  var black = (getComputedStyle(document.body).getPropertyValue('--bs-black')).trim();
+  var borderColor = (getComputedStyle(document.body).getPropertyValue('--bs-border-color')).trim();
+  
+  var chartOptions = getChartApexDefaultOptions();
+  
+  chartOptions.dataLabels = { enabled: false };
+  chartOptions.plotOptions = {
+    bar: {
+      horizontal: true,
+      dataLabels: { position: 'top' }
+    }  
+  };
+  chartOptions.dataLabels = {
+    enabled: true,
+    offsetX: -6,
+    style: {
+      fontSize: '10px',
+      fontWeight: 500,
+      colors: [black]
+    }
+  };
+  chartOptions.colors = [theme, white];
+  chartOptions.stroke = { show: false };
+  chartOptions.xaxis.categories = [2013, 2014, 2015, 2016, 2017, 2018, 2019];
+  chartOptions.xaxis.axisBorder = {
+    show: true,
+    color: borderColor,
+    height: 1,
+    width: '100%',
+    offsetX: 0,
+    offsetY: -1
+  };
+  chartOptions.xaxis.axisTicks = {
+    show: true,
+    borderType: 'solid',
+    color: borderColor,
+    height: 6,
+    offsetX: 0,
+    offsetY: 0
+  };
+  
+  var chartData = [
+    { data: [44, 55, 41, 64, 22, 43, 21] },
+    { data: [53, 32, 33, 52, 13, 44, 32] }
+  ];
+  
+  return (
+    <div>
+      <Chart type="bar" options={chartOptions} series={chartData} height="250" />
+    </div>
+  )
+}
+
+export default ChartApex;

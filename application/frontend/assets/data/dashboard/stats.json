@@ -1,0 +1,14 @@
+{
+	"stored_backups": {
+		"title": "dashboard.stored_backups",
+		"value": "134",
+		"last_at": "2025-07-29 12:33:01"
+	},
+	"storage_diskspace": {
+		"title": "dashboard.diskspace_backups",
+		"used_size": "125 Gb",
+		"used_perc": "23%",
+		"free_size": "843 Gb",
+		"disk_size": "985 Gb"
+	}
+}

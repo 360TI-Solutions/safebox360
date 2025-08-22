@@ -1,0 +1,7 @@
+[
+	{ "no": "1", "noClass": "bg-theme text-black", "country": "NORTH AMERICA REGION", "percentage": "75%", "percentageClass": "bg-theme", "sales": "$700k" }, 
+	{ "no": "2", "noClass": "bg-theme bg-opacity-75 text-black", "country": "EUROPE REGION", "percentage": "85%", "percentageClass": "bg-theme bg-opacity-75", "sales": "$850k" }, 
+	{ "no": "3", "noClass": "bg-theme bg-opacity-50 text-black", "country": "ASIA-PACIFIC REGION", "percentage": "60%", "percentageClass": "bg-theme bg-opacity-50", "sales": "$600k" }, 
+	{ "no": "4", "noClass": "bg-white bg-opacity-25 text-black", "country": "SOUTH AMERICA REGION", "percentage": "90%", "percentageClass": "bg-white bg-opacity-25", "sales": "$900k" }, 
+	{ "no": "5", "noClass": "bg-white bg-opacity-25 text-black", "country": "AFRICA REGION", "percentage": "40%", "percentageClass": "bg-white bg-opacity-25", "sales": "$400k" }
+]

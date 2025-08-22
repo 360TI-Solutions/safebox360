@@ -1,0 +1,49 @@
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { getChartApexDefaultOptions } from './composables/apexChartOptions.js';
+
+function ChartApex() {
+  var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+  var gray900 = (getComputedStyle(document.body).getPropertyValue('--bs-gray-900')).trim();
+  
+  var chartOptions = getChartApexDefaultOptions();
+  
+  chartOptions.dataLabels = { enabled: false };
+  chartOptions.colors = [theme];
+  chartOptions.plotOptions = { heatmap: { radius: 0 } };
+  chartOptions.stroke = { show: true, colors: [gray900], width: 2, dashArray: 0 };
+  chartOptions.title.text = 'HeatMap Chart (Single color)';
+  
+  // heatmap chart
+  function generateHeatmapData(count, yrange) {
+    var i = 0;
+    var series = [];
+    while (i < count) {
+      var x = 'w' + (i + 1).toString();
+      var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+      series.push({ x: x, y: y });
+      i++;
+    }
+    return series;
+  }
+  
+  var chartData = [
+    { name: 'Metric1', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric2', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric3', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric4', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric5', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric6', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric7', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric8', data: generateHeatmapData(18, {  min: 0, max: 90 }) }, 
+    { name: 'Metric9', data: generateHeatmapData(18, {  min: 0, max: 90 }) }
+  ];
+
+  return (
+    <div>
+      <Chart type="heatmap" options={chartOptions} series={chartData} height="250" />
+    </div>
+  )
+}
+
+export default ChartApex;

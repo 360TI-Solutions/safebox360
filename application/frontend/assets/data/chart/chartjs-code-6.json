@@ -1,0 +1,42 @@
+import React, { useEffect } from 'react';
+import Chart from 'chart.js/auto';
+import { getChartJsDefaultOptions } from './../../composables/chartOptions.js';
+
+function ChartJs() {
+  useEffect(() => {
+    var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+    var themeRgb = (getComputedStyle(document.body).getPropertyValue('--bs-theme-rgb')).trim();
+    var gray900 = (getComputedStyle(document.body).getPropertyValue('--bs-gray-900')).trim();
+    var gray900Rgb = (getComputedStyle(document.body).getPropertyValue('--bs-gray-900')).trim();
+    var white = (getComputedStyle(document.body).getPropertyValue('--bs-white')).trim();
+    var whiteRgb = (getComputedStyle(document.body).getPropertyValue('--bs-white-rgb')).trim();
+    
+    getChartJsDefaultOptions();
+    
+    new Chart(document.getElementById('doughnutChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Total Visitor', 'New Visitor', 'Returning Visitor'],
+        datasets: [{
+          data: [300, 50, 100],
+          backgroundColor: ['rgba('+ themeRgb +', .5)', 'rgba('+ whiteRgb +', .2)', 'rgba('+ gray900Rgb +', .5)'],
+          hoverBackgroundColor: [theme, white, gray900],
+          borderWidth: 0
+        }]
+      },
+      options: {
+        maintainAspectRatio: false
+      }
+    });
+    
+    // eslint-disable-next-line
+  }, []);
+  
+  return (
+    <div class="h-250px">
+      <canvas id="doughnutChart"></canvas>
+    </div>
+  )
+}
+
+export default ChartJs;

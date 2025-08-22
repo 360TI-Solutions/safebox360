@@ -1,0 +1,10 @@
+{ 
+	"statsData": [
+		{ "title": "CONVERSION RATE", "value": "12%", "desc": [{ "name": "total clicks", "value": "294k" }, { "name": "click-through rate", "value": "23%" }] }, 
+		{ "title": "USER REACHED", "value": "7.58m", "desc": [{ "name": "bounce rate", "value": "23%" }, { "name": "engagement rate", "value": "85%" }] }
+	],
+	"adsData": [
+		{ "icon": "material-symbols-light:ads-click", "title": "PAID SEARCH ADS", "date": "MON 26/6 - SUN 2/7", "progress": "68%", "desc": "47.8% people made a purchase after clicking the ad" }, 
+		{ "icon": "material-symbols-light:video-camera-front-outline-sharp", "title": "VIDEO AD CAMPAIGN", "date": "MON 17/7 - SUN 23/7", "progress": "85%", "desc": "54.6% viewers watched till the end" }
+	]
+}

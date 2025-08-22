@@ -1,0 +1,26 @@
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { getChartApexDefaultOptions } from './composables/apexChartOptions.js';
+
+function ChartApex() {
+  var themeRgb = (getComputedStyle(document.body).getPropertyValue('--bs-theme-rgb')).trim();
+  var whiteRgb = (getComputedStyle(document.body).getPropertyValue('--bs-white-rgb')).trim();
+  
+  var chartOptions = getChartApexDefaultOptions();
+  
+  chartOptions.dataLabels = { dropShadow: { enabled: false } };
+  chartOptions.stroke = { show: false };
+  chartOptions.colors = [ 'rgba('+ whiteRgb +', .5)',  'rgba('+ themeRgb +', .25)',  'rgba('+themeRgb +', .5)', 'rgba('+ themeRgb + ', .15)',  'rgba('+whiteRgb +', .25)'];
+  chartOptions.labels = ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'];
+  chartOptions.title.text = 'HeatMap Chart (Single color)';
+  
+  var chartData = [44, 55, 13, 43, 22];
+
+  return (
+    <div>
+      <Chart type="pie" options={chartOptions} series={chartData} height="250" />
+    </div>
+  )
+}
+
+export default ChartApex;

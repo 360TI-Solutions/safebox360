@@ -1,0 +1,49 @@
+import React from 'react';
+import Chart from 'react-apexcharts';
+import { getChartApexDefaultOptions } from './composables/apexChartOptions.js';
+
+function ChartApex() {
+  var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+  var themeRgb = (getComputedStyle(document.body).getPropertyValue('--bs-theme-rgb')).trim();
+  var whiteRgb = (getComputedStyle(document.body).getPropertyValue('--bs-white-rgb')).trim();
+  var borderColor = (getComputedStyle(document.body).getPropertyValue('--bs-border-color')).trim();
+  
+  var chartOptions = getChartApexDefaultOptions();
+  
+  chartOptions.plotOptions = {
+    radialBar: {
+      offsetY: 0,
+      startAngle: 0,
+      endAngle: 270,
+      hollow: { margin: 5, size: '30%', background: 'transparent', image: undefined },
+      track: { background: borderColor },
+      dataLabels: {
+        name: { show: false },
+        value: { show: false }
+      }
+    }
+  };
+  chartOptions.colors = [theme, 'rgba('+ themeRgb + ', .5)', 'rgba('+ themeRgb + ', .25)', 'rgba('+ whiteRgb + ', .25)'];
+  chartOptions.labels = ['Vimeo', 'Messenger', 'Facebook', 'LinkedIn'];
+  chartOptions.legend = {
+    show: true,
+    floating: true,
+    position: 'left',
+    labels: { useSeriesColors: true },
+    markers: { size: 0 },
+    formatter: function(seriesName, opts) {
+      return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+    },
+    itemMargin: { horizontal: 1 }
+  };
+  
+  var chartData = [76, 67, 61, 90];
+
+  return (
+    <div>
+      <Chart type="radialBar" options={chartOptions} series={chartData} height="250" />
+    </div>
+  )
+}
+
+export default ChartApex;

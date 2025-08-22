@@ -1,0 +1,8 @@
+import { Card, CardHeader, CardHeaderBtn } from './../../components/card/card.jsx';
+
+<Card>
+  <CardHeader className="with-btn">
+    ...
+    <CardHeaderBtn />
+  </CardHeader>
+</Card>

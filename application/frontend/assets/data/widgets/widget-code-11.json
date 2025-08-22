@@ -1,0 +1,19 @@
+<Card>
+  <CardBody>
+    <a href="#/" className="d-flex align-items-center text-body text-decoration-none fs-12px">
+      <div className="flex-fill pe-3">
+        <div className="fw-semibold">Library (20)</div>
+        <div className="fs-10px text-white text-opacity-50">3,192 Image Found</div>
+      </div>
+      <div>
+        <i className="fa fa-chevron-right fa-lg text-body text-opacity-50"></i>
+      </div>
+    </a>
+  </CardBody>
+  <div className="widget-img-list mt-1px">
+    <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-1.jpg" data-lity><span className="img" style={{ backgroundImage: 'url(/assets/img/gallery/gallery-1.jpg)' }}></span></a></div>
+    <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-2.jpg" data-lity><span className="img" style={{ backgroundImage: 'url(/assets/img/gallery/gallery-2.jpg)' }}></span></a></div>
+    <div className="widget-img-list-item"><a href="/assets/img/gallery/gallery-3.jpg" data-lity><span className="img" style={{ backgroundImage: 'url(/assets/img/gallery/gallery-3.jpg)' }}></span></a></div>
+    ...
+  </div>
+</Card>

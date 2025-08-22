@@ -1,0 +1,83 @@
+import React, { useEffect } from 'react';
+import Chart from 'chart.js/auto';
+import { Card, CardHeader, CardHeaderBtn, CardBody } from './../../components/card/card.jsx';
+import { getChartJsDefaultOptions } from './../../composables/chartOptions.js';
+
+function Widgets() {
+  var chart = '';
+  
+  function renderChart() {
+    getChartJsDefaultOptions();
+    
+    var themeRgb = (getComputedStyle(document.body).getPropertyValue('--bs-theme-rgb')).trim();
+    var theme = (getComputedStyle(document.body).getPropertyValue('--bs-theme')).trim();
+    
+    var chartContainer = document.getElementById('chartContainer');
+    if (chart) {
+      chart.destroy();
+    }
+    if (chartContainer) {
+      chartContainer.innerHTML = '<canvas id="widgetBarChart" className="w-100 h-100"></canvas>';
+      chart = new Chart(document.getElementById('widgetBarChart'), {
+        type: 'line',
+        data: {
+          labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+          datasets: [{
+            color: theme,
+            backgroundColor: 'rgba('+ themeRgb +', .2)',
+            borderColor:theme,
+            borderWidth: 1.5,
+            pointBackgroundColor: theme,
+            pointBorderWidth: 1.5,
+            pointRadius: 4,
+            pointHoverBackgroundColor: theme,
+            pointHoverBorderColor: theme,
+            pointHoverRadius: 7,
+            label: 'Total Sales',
+            data: [12, 19, 4, 5, 2, 3]
+          }]
+        },
+        options: {
+          maintainAspectRatio: false
+        }
+      });
+    }
+  }
+  
+  useEffect(() => {
+    renderChart();
+    
+    document.addEventListener('theme-reload', () => {
+      renderChart();
+    });
+    // eslint-disable-next-line
+  }, []);
+  
+  return (
+    <Card>
+      <CardHeader className="with-btn">
+        WEEKLY ANALYTICS
+        <CardHeaderBtn />
+      </CardHeader>
+      <CardBody className="text-body text-center">
+        <div className="h-150px w-100 d-block mb-n1">
+          <div id="chartContainer"></div>
+        </div>
+      </CardBody>
+      <CardBody className="d-flex align-items-center">
+        <div className="w-35px h-35px bg-theme bg-opacity-15 text-theme d-flex align-items-center justify-content-center fs-30px">
+          <Icon icon="material-symbols-light:frame-person-outline-sharp" />
+        </div>
+        <div className="flex-fill px-3 py-1">
+          <div className="fw-semibold">Total Visitors</div>
+          <div className="small text-body text-opacity-50">11 Mar - 18 Mar</div>
+        </div>
+        <div>
+          <div className="fw-semibold h3 m-0">1.3m</div>
+        </div>
+      </CardBody>
+    </Card>
+  )
+}
+
+export default Widgets;

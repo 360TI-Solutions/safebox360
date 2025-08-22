@@ -1,0 +1,7 @@
+[
+	{ "name": "FIREWALL", "value": "ENABLED"},
+	{ "name": "PERMISSION", "value": "ADMIN"},
+	{ "name": "ENCRYPTION", "value": "AES-256"},
+	{ "name": "IDS LEVEL", "value": "High"},
+	{ "name": "ACCESS CONTROL", "value": "BIOMETRIC AUTHENTICATION"}
+]

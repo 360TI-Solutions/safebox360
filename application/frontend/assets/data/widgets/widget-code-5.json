@@ -1,0 +1,10 @@
+<div className="widget-user-list">
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link"><img src="/assets/img/user/user-1.jpg" alt="" /></a></div>
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link"><img src="/assets/img/user/user-2.jpg" alt="" /></a></div>
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link"><img src="/assets/img/user/user-3.jpg" alt="" /></a></div>
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link"><img src="/assets/img/user/user-4.jpg" alt="" /></a></div>
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link"><img src="/assets/img/user/user-5.jpg" alt="" /></a></div>
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link"><img src="/assets/img/user/user-6.jpg" alt="" /></a></div>
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link"><img src="/assets/img/user/user-7.jpg" alt="" /></a></div>
+  <div className="widget-user-list-item"><a href="#/" className="widget-user-list-link bg-white bg-opacity-15 text-white fs-10px fw-semibold">+26</a></div>
+</div>

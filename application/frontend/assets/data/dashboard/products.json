@@ -1,0 +1,8 @@
+[
+	{ "icon": "material-symbols-light:phone-iphone-outline-sharp", "title": "APPLE IPHONE 15 PRO MAX", "price": "$1,099.00", "sold": "210" }, 
+	{ "icon": "material-symbols-light:camera-outline", "title": "SONY A7 IV CAMERA", "price": "$2,499.00", "sold": "198" }, 
+	{ "icon": "material-symbols-light:laptop-mac-outline-sharp", "title": "APPLE MACBOOK PRO (M2, 2024)", "price": "$2,499.00", "sold": "162" }, 
+	{ "icon": "material-symbols-light:watch-screentime-outline", "title": "APPLE WATCH ULTRA 2", "price": "$799.00", "sold": "130" }, 
+	{ "icon": "material-symbols-light:sports-esports-outline-sharp", "title": "MICROSOFT XBOX SERIES X", "price": "$499.00", "sold": "120" }, 
+	{ "icon": "material-symbols-light:speaker-outline-sharp", "title": "JBL FLIP 6 SPEAKER", "price": "$129.00", "sold": "110" }
+]
