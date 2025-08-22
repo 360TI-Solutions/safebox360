@@ -37,6 +37,41 @@ Interface available in English, Spanish, French, German, Italian, Dutch, Portugu
 
 ---
 
+## 🖼️ Screenshots
+
+**Dashboard Overview**
+
+An intuitive dashboard that provides full visibility of your network backup status.
+
+**Device Management**
+
+![Device Management Screenshot](screenshots/devices.png)  
+
+Easily register, organize and manage all your network devices — including switches, routers, firewalls and OLTs — with vendor and model classification for full control and visibility.
+
+**Backup Scheduling**
+
+Easily define days and times for automatic backups based on TAGs.
+
+
+**Storage Explorer**
+
+Browse and manage your stored backup files with a simple and organized view.
+
+**Log View**
+
+Monitor all backup operations and system events with detailed logs.
+
+**Version History & Diff**
+
+Quickly view, download and compare backup versions with side-by-side diff.
+
+**Multilingual Interface**
+
+Available in multiple languages: EN, ES, FR, DE, IT, NL, PT-PT, PT-BR.
+
+---
+
 ## ⚙️  Installation Requirements
 
 Installing the SafeBox360 Client is simple, fast, secure, and fully automated — carried out with zero user interaction required.
