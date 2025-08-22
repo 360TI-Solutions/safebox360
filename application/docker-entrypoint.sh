@@ -12,8 +12,8 @@ if [ ! -f /var/www/.tmp/installed ]; then
   # Crie pastas necessárias
   mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views storage/logs storage/tmp
   chown -R administrator:administrator /var/www
-  chown root:root /var/www/bin/dmi
-  chmod a+s /var/www/bin/dmi
+#  chown root:root /var/www/bin/dmi
+#  chmod a+s /var/www/bin/dmi
 
   # Exemplo: instalar dependências PHP
   composer install --no-interaction --prefer-dist

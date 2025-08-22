@@ -22,7 +22,7 @@ APP_UID=$APP_UID
 APP_GID=$APP_GID
 EOF
 
-cp -f composer.json.default composer.json
+cp -f composer.json.default backend/composer.json
 cp -f docker-compose.yml.default docker-compose.yml 
 
 sed -i "s/DB_PASSWORD=safebox360/DB_PASSWORD=${nova}/g" .env

@@ -3,6 +3,7 @@ ARG user=administrator
 ARG uid=1000
 ARG gid=1000
 RUN mkdir /home/administrator
+RUN mkdir /home/administrator/tftpboot
 RUN apt-get update
 RUN apt-get install -y \
 git \
@@ -30,6 +31,7 @@ libpng-dev \
 libonig-dev \
 libxml2-dev \
 libcurl4-openssl-dev \
+tftpd-hpa \
 zip \
 unzip \
 libpq-dev \

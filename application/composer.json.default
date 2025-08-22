@@ -13,7 +13,9 @@
         "laravel/reverb": "^1.5",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
-        "phpseclib/phpseclib": "*"
+        "phpseclib/phpseclib": "*",
+        "predis/predis": "^3.2",
+        "tymon/jwt-auth": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -29,7 +31,13 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        }
+        },
+	"files": [
+            "app/Helpers/LogHelper.php",
+            "app/Helpers/StaticFunctions.php",
+            "app/Helpers/SqlError.php",
+            "app/Helpers/CpfCnpj.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
