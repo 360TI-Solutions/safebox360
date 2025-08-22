@@ -48,7 +48,8 @@ An intuitive dashboard that provides full visibility of your network backup stat
 Easily register, organize and manage all your network devices — including switches, routers, firewalls and OLTs — with vendor and model classification for full control and visibility.
 
 <p align="center">
-  <img src="screenshots/devices.png" alt="Devices Management" width="500"/>
+  <img src="screenshots/devices.png" alt="Devices Management" width="45%"/>
+  <img src="screenshots/devices2.png" alt="Devices Management" width="45%"/>
 </p>
 
 **Backup Scheduling**
