@@ -56,6 +56,10 @@ Easily register, organize and manage all your network devices — including swit
 
 Easily define days and times for automatic backups based on TAGs.
 
+<p align="center">
+  <img src="screenshots/schedules.png" alt="Schedules Management" width="45%"/>
+  <img src="screenshots/schedules2.png" alt="Schedules Management" width="45%"/>
+</p>
 
 **Storage Explorer**
 
