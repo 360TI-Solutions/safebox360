@@ -75,8 +75,8 @@ Browse and manage your stored backup files with a simple and organized view.
 Monitor all backup operations and system events with detailed logs.
 
 <p align="center">
-  <img src="screenshots/diff.png" alt="Diff Management" width="45%"/>
-  <img src="screenshots/diff2.png" alt="Diff Management" width="45%"/>
+  <img src="screenshots/log.png" alt="Log View" width="45%"/>
+  <img src="screenshots/log2.png" alt="Log View" width="45%"/>
 </p>
 
 **Version History & Diff**
