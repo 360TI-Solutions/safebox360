@@ -94,7 +94,7 @@ Available in multiple languages: EN, ES, FR, DE, IT, NL, PT-PT, PT-BR.
 
 <p align="center">
   <img src="screenshots/lang.png" alt="Language Settings" width="45%"/>
-  <img src="screenshots/lang.png" alt="Language Settings" width="45%"/>
+  <img src="screenshots/lang2.png" alt="Language Settings" width="45%"/>
 </p>
 
 ---
