@@ -87,7 +87,7 @@ services:
 networks:
     safebox360network:
         driver: bridge
-        #ipam:
-        #    config:
-        #        - subnet: 172.27.4.0/24
-        #          gateway: 172.27.4.1
+        ipam:
+            config:
+                - subnet: 100.100.100.0/24
+                  gateway: 100.100.100.1
