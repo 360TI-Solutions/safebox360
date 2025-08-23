@@ -1,4 +1,4 @@
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
-
+*/30 * * * * root /usr/bin/docker compose -f /opt/safebox360/application/docker-compose.yml exec safebox360 php artisan app:ping
