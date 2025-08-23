@@ -9,7 +9,7 @@ services:
             args:
               - uid=${APP_UID}
               - user=administrator
-        image: safebox360:latest
+        #image: safebox360:latest
         container_name: safebox360
         restart: unless-stopped
         working_dir: /var/www/
