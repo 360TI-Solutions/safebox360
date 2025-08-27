@@ -39,63 +39,7 @@ Interface available in English, Spanish, French, German, Italian, Dutch, Portugu
 
 ## 🖼️ Screenshots
 
-**Dashboard Overview**
-
-An intuitive dashboard that provides full visibility of your network backup status.
-
-**Device Management**
-
-Easily register, organize and manage all your network devices — including switches, routers, firewalls and OLTs — with vendor and model classification for full control and visibility.
-
-<p align="center">
-  <img src="screenshots/devices.png" alt="Devices Management" width="45%"/>
-  <img src="screenshots/devices2.png" alt="Devices Management" width="45%"/>
-</p>
-
-**Backup Scheduling**
-
-Easily define days and times for automatic backups based on TAGs.
-
-<p align="center">
-  <img src="screenshots/schedules.png" alt="Schedules Management" width="45%"/>
-  <img src="screenshots/schedules2.png" alt="Schedules Management" width="45%"/>
-</p>
-
-**Storage Explorer**
-
-Browse and manage your stored backup files with a simple and organized view.
-
-<p align="center">
-  <img src="screenshots/storage.png" alt="Storage Management" width="45%"/>
-  <img src="screenshots/storage2.png" alt="Storage Management" width="45%"/>
-</p>
-
-**Log View**
-
-Monitor all backup operations and system events with detailed logs.
-
-<p align="center">
-  <img src="screenshots/log.png" alt="Log View" width="45%"/>
-  <img src="screenshots/log2.png" alt="Log View" width="45%"/>
-</p>
-
-**Version History & Diff**
-
-Quickly view, download and compare backup versions with side-by-side diff.
-
-<p align="center">
-  <img src="screenshots/diff.png" alt="Log View" width="45%"/>
-  <img src="screenshots/diff2.png" alt="Log View" width="45%"/>
-</p>
-
-**Multilingual Interface**
-
-Available in multiple languages: EN, ES, FR, DE, IT, NL, PT-PT, PT-BR.
-
-<p align="center">
-  <img src="screenshots/lang.png" alt="Language Settings" width="45%"/>
-  <img src="screenshots/lang2.png" alt="Language Settings" width="45%"/>
-</p>
+You can view all screenshot at https://safebox360.com/#features
 
 ---
 
@@ -105,7 +49,7 @@ Installing the SafeBox360 Client is simple, fast, secure, and fully automated �
 
 Just use the official ISO image provided by 360TI Solutions, ensuring you always have the most up-to-date and validated version of the system.
 
-🔗 Download it here: https://safebox360.com/get
+🔗 Download it here: https://safebox360.com/#download
 
 ### 💻 Minimum Recommended Resources
 
@@ -116,7 +60,7 @@ Just use the official ISO image provided by 360TI Solutions, ensuring you always
 These requirements are designed to deliver high performance even in demanding network environments.
 
 📖 A complete step-by-step installation guide is available at:
-https://safebox360.com/install
+https://safebox360.com/download#install
 
 With it, your company will have the SafeBox360 Client up and running within minutes, ready to protect the network assets that keep your business moving forward.
 
@@ -128,14 +72,16 @@ The SafeBox360 Client is available in different editions to meet the needs of bu
 
 **Free / Trial** → Up to 2 network devices
 
-**Standard** → Up to 100 network devices
+**Small** → Up to 50 network devices
 
-**Pro** → Up to 200 network devices
+**Medium** → Up to 100 network devices
 
-**Enterprise** → More than 200 network devices
+**Large** → Up to 200 network devices
+
+**Enterprise** → More than 200 network devices / Customized version
 
 📖 For the complete licensing model and details, please visit:
-👉 https://safebox360.com/licensing
+👉 https://safebox360.com/#pricing
 
 ---
 
