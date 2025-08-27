@@ -14,6 +14,7 @@
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.5",
         "phpseclib/phpseclib": "*",
+	"league/csv": "^9.24",
         "predis/predis": "^3.2",
         "tymon/jwt-auth": "*"
     },
