@@ -17,5 +17,6 @@
     "invalid_license": "Ungültige Lizenz! [105]",
     "license_error": "Lizenzfehler / Lizenz nicht gefunden. [106]",
     "license_blocked": "Lizenz blockiert! [107]",
-    "cannot_run_directly": "Dieses Skript kann nicht auf diese Weise ausgeführt werden. [108]"
+    "cannot_run_directly": "Dieses Skript kann nicht auf diese Weise ausgeführt werden. [108]",
+    "getting": "Einstellungen werden heruntergeladen"
 }

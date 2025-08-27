@@ -35,7 +35,10 @@ return new class extends Migration
             ['directive' => 'smtp_sender_email', 'value' => 'your@email.com'],
             ['directive' => 'smtp_sender_name', 'value' => 'SAFEBOX 360'],
 
-            ['directive' => 'update_checksum', 'value' => '0']
+            ['directive' => 'update_checksum', 'value' => '0'],
+            ['directive' => 'version', 'value' => '1.0'],
+            ['directive' => 'release', 'value' => '1'],
+            ['directive' => 'lastupdate', 'value' => '']
             
         ]);
     }

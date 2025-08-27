@@ -17,5 +17,6 @@
     "invalid_license": "Ongeldige licentie! [105]",
     "license_error": "Licentiefout / Licentie niet gevonden. [106]",
     "license_blocked": "Licentie geblokkeerd! [107]",
-    "cannot_run_directly": "Dit script kan niet op deze manier worden uitgevoerd. [108]"
+    "cannot_run_directly": "Dit script kan niet op deze manier worden uitgevoerd. [108]",
+    "getting": "Instellingen downloaden"
 }

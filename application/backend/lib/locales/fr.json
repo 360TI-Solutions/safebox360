@@ -17,5 +17,6 @@
     "invalid_license": "Licence invalide ! [105]",
     "license_error": "Erreur de licence / Licence introuvable. [106]",
     "license_blocked": "Licence bloquée ! [107]",
-    "cannot_run_directly": "Ce script ne peut pas être exécuté de cette manière. [108]"
+    "cannot_run_directly": "Ce script ne peut pas être exécuté de cette manière. [108]",
+    "getting": "Téléchargement des paramètres"
 }
