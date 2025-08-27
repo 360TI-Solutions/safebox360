@@ -1,9 +1,9 @@
 [
-	{ "icon": "material-symbols-light:bar-chart-4-bars", "title": "REVENUE", "value": "$7.5m" },
-	{ "icon": "material-symbols-light:group-outline", "title": "CUSTOMERS", "value": "45k" },
-	{ "icon": "material-symbols-light:touch-app-outline", "title": "VISITS", "value": "1.3m" },
-	{ "icon": "material-symbols-light:approval-delegation-outline", "title": "PROFIT", "value": "$3.2m" },
-	{ "icon": "material-symbols-light:app-badging-outline", "title": "LAUNCHES", "value": "4" },
-	{ "icon": "material-symbols-light:store-outline", "title": "SALES", "value": "$8.9m" }
+	{ "icon": "material-symbols:precision-manufacturing", "title": "FABRICANTES", "value": "3" },
+	{ "icon": "material-symbols:more-up", "title": "MAIS UTILIZADO", "value": "Cisco" },
+	{ "icon": "material-symbols:more-down", "title": "MENOS UTILIZADO", "value": "Mikrotik" },
+	{ "icon": "tabler:automation", "title": "SCRIPTS", "value": "20" },
+	{ "icon": "material-symbols:more-down", "title": "MAIS UTILIZADO", "value": "4" },
+	{ "icon": "material-symbols:more-down", "title": "MENOS UTILIZADO", "value": "$8.9m" }
 ]
 	

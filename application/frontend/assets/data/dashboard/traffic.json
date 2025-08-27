@@ -1,21 +1,7 @@
 {
-	"total_visit": "33,129",
+	"total_devices": "10",
 	"country": [
 		{ "name": "FRANCE",	"visits": "13,849", "pct": "40.79%", "class": "" },
-		{ "name": "SPAIN",	"visits": "3,216", "pct": "9.79%", "class": "" },
-		{ "name": "MEXICO",	"visits": "1,398", "pct": "4.26%", "class": "text-theme fw-bold bg-white bg-opacity-10" },
-		{ "name": "UNITED STATES",	"visits": "1,090", "pct": "3.32%", "class": "" },
-		{ "name": "BELGIUM",	"visits": "1,045", "pct": "3.18%", "class": ""},
-		{ "name": "INDIA",	"visits": "1,033", "pct": "3.09%", "class": ""},
-		{ "name": "BRAZIL",	"visits": "954", "pct": "2.81%", "class": ""},
-		{ "name": "JAPAN",	"visits": "911", "pct": "3.09%", "class": ""},
-		{ "name": "ARCANIA",	"visits": "839", "pct": "2.13%", "class": ""}
-	],
-	"browser": [
-		{ "name": "Chrome", "no": "8,000", "pct": "40%", "class": "" },
-		{ "name": "Firefox", "no": "5,000", "pct": "25%", "class": "" },
-		{ "name": "Safari", "no": "3,000", "pct": "15%", "class": "text-theme fw-600 bg-white bg-opacity-10" },
-		{ "name": "Edge", "no": "2,000", "pct": "10%", "class": "" },
-		{ "name": "Opera", "no": "1,000", "pct": "5%", "class": "" }
+		{ "name": "SPAIN",	"visits": "3,216", "pct": "9.79%", "class": "" }
 	]
 }
