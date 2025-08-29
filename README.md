@@ -70,16 +70,6 @@ With it, your company will have the SafeBox360 Client up and running within minu
 
 The SafeBox360 Client is available in different editions to meet the needs of businesses of all sizes — from initial evaluation to mission-critical infrastructures.
 
-**Free / Trial** → Up to 2 network devices
-
-**Small** → Up to 50 network devices
-
-**Medium** → Up to 100 network devices
-
-**Large** → Up to 200 network devices
-
-**Enterprise** → More than 200 network devices / Customized version
-
 📖 For the complete licensing model and details, please visit:
 👉 https://safebox360.com/#pricing
 
